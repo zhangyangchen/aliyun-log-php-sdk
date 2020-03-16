@@ -8,6 +8,13 @@
 
 2018-02-18
 
+## Install
+
+Via Composer
+
+``` bash
+$ composer require zhangyangchen/aliyun-log-php-sdk
+```
 ## Introduction
 
 Log Service SDK for PHP，used to set/get log data to Aliyun Log Service(www.aliyun.com/product/sls).
