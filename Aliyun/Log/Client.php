@@ -5,7 +5,7 @@
  */
 date_default_timezone_set ( 'Asia/Shanghai' );
 
-require_once realpath ( dirname ( __FILE__ ) . '/../../Log_Autoload.php' );
+//require_once realpath ( dirname ( __FILE__ ) . '/../../Log_Autoload.php' );
 require_once realpath ( dirname ( __FILE__ ) . '/requestcore.class.php' );
 require_once realpath ( dirname ( __FILE__ ) . '/sls.proto.php' );
 require_once realpath ( dirname ( __FILE__ ) . '/protocolbuffers.inc.php' );
@@ -242,7 +242,7 @@ class Aliyun_Log_Client {
         $logGroup->setSource ( $source );
         $logitems = $request->getLogitems ();
         foreach ( $logitems as $logItem ) {
-            $log = new Log ();
+            $log = new Aliyun_Log ();
             $log->setTime ( $logItem->getTime () );
             $content = $logItem->getContents ();
             foreach ( $content as $key => $value ) {
